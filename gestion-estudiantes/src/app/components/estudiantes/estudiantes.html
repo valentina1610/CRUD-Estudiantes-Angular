@@ -1,0 +1,46 @@
+<h2>Gestión de Estudiantes</h2>
+
+<form (submit)="estudianteSeleccionado.id ? actualizar() : agregar(); $event.preventDefault()">
+  <!-- evento que se ejecuta cuando el usuario envía el formulario. Si el estudiante tiene un ID (es decir, ya existe), llama a la función actualizar().
+Si no tiene ID, llama a agregar(). Después, $event.preventDefault() evita que la página se recargue (comportamiento por defecto de los formularios HTML).-->
+  <input [(ngModel)]="estudianteSeleccionado.firstName" name="firstName" placeholder="Nombre" required>
+  <!-- [(ngModel)] = "..."  →  vinculación bidireccional (two-way binding).
+  Significa que el valor del input se guarda automáticamente en estudianteSeleccionado.firstName
+  y si el valor de esa propiedad cambia en el código, también se actualiza en el input.  -->
+  <input [(ngModel)]="estudianteSeleccionado.lastName" name="lastName" placeholder="Apellido" required>
+  <button type="submit">{{ estudianteSeleccionado.id ? 'Actualizar' : 'Agregar' }}</button>
+    <!-- Este botón envía el formulario. El texto del botón cambia dinámicamente: Si el estudiante tiene ID, muestra "Actualizar". Si no tiene, muestra "Agregar".
+  -->
+    
+  <button type="button" (click)="limpiarFormulario()">Limpiar</button>
+  <!-- Botón para limpiar los campos del formulario. type="button" evita que se envíe el formulario al hacer clic. Al hacer clic, ejecuta la función limpiarFormulario().
+  -->
+</form>
+
+<hr>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- *ngFor: directiva de Angular que recorre la lista 'estudiantes' -->
+    <!-- Por cada estudiante (est) crea una nueva fila <tr> -->
+    <tr *ngFor="let est of estudiantes">
+      <td>{{ est.id }}</td>
+      <td>{{ est.firstName }}</td>
+      <td>{{ est.lastName }}</td>
+      <td>
+        <button (click)="editar(est)">Editar</button>
+        <!-- Al hacer clic, se llama a la función editar() y se le pasa el estudiante -->
+        <button (click)="eliminar(est.id)">Eliminar</button>
+        <!-- Al hacer clic, se llama a la función eliminar() pasando el ID del estudiante -->
+      </td>
+    </tr>
+  </tbody>
+</table>
