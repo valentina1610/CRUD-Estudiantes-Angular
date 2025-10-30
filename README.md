@@ -1,6 +1,6 @@
 # 📚 CRUD de Estudiantes en Angular
 
-Este proyecto es una aplicación web desarrollada en **Angular** que permite gestionar estudiantes mediante operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar) conectadas a una **API REST**.
+Este proyecto es una aplicación web desarrollada en **Angular** que permite gestionar estudiantes mediante operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar) conectadas a una **API**.
 
 ---
 
@@ -18,9 +18,9 @@ Este proyecto es una aplicación web desarrollada en **Angular** que permite ges
 
 - **Angular 18+**
 - **TypeScript**
-- **HTML5 / CSS3**
+- **HTML5**
 - **RxJS**
-- **MockAPI** (para simular una base de datos)
+- **MockAPI** 
 - **HttpClient** (para manejar las peticiones HTTP)
 
 ---
