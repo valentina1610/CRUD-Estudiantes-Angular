@@ -31,14 +31,14 @@ Este proyecto es una aplicación web desarrollada en **Angular** que permite ges
    ```bash
    git clone https://github.com/valentina1610/CRUD-Estudiantes-Angular.git```
 
-##🌐 API utilizada
+## 🌐 API utilizada
 
 Los datos se obtienen desde MockAPI:
 https://681cdcfaf74de1d219ae0c04.mockapi.io/students
 
 ---
 
-##🧩 Componentes principales
+## 🧩 Componentes principales
 
 🔹 EstudiantesComponent
 
