@@ -54,7 +54,7 @@ https://681cdcfaf74de1d219ae0c04.mockapi.io/students
 
 ---
   
-##🧑‍💻 Autor
+## 🧑‍💻 Autor
 
 Valentina Olmos
 📅 Año: 2025
