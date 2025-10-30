@@ -1,4 +1,3 @@
-// Importamos los decoradores y herramientas necesarias de Angular
 import { Injectable } from '@angular/core'; 
 import { HttpClient } from '@angular/common/http';// Para hacer peticiones HTTP (GET, POST, PUT, DELETE)
 import { Observable } from 'rxjs'; // Permite manejar las respuestas asíncronas de las peticiones
